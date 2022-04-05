@@ -33,6 +33,7 @@ function App() {
     }
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getTokenInfo = async () => {
     try {
       if (window.ethereum) {
@@ -144,7 +145,7 @@ function App() {
   useEffect(() => {
     checkIfWalletIsConnected();
     getTokenInfo();
-  }, [])
+  }, [getTokenInfo])
 
   return (
     <main className="main-container">
